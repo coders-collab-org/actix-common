@@ -1,0 +1,25 @@
+[package]
+name = "actix-common"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [ "crates/cli","crates/macros", "examples/*"]
+
+[lib]
+name = "actix_common"
+path = "src/lib.rs"
+
+[workspace.dependencies]
+actix-common = { path = "./" }
+actix-web = "4"
+schemars = { package = "apistos-schemars", version = "0.8" }
+apistos = "0.2"
+
+[dependencies]
+
+actix-common-macros = { path = "./crates/macros" }
+
+actix-web.workspace = true
+schemars.workspace = true
+apistos.workspace = true

@@ -1,0 +1,24 @@
+[package]
+name = "actix-common-macros"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "actix_common_macros"
+path = "src/lib.rs"
+proc-macro = true
+
+
+[dependencies]
+syn = { version = "2", default-features = false, features = [
+  "parsing",
+  "proc-macro",
+  "derive",
+  "printing",
+] }
+proc-macro2 = { version = "1", default-features = false }
+quote = { version = "1", default-features = false }
+heck = { version = "0.4", default-features = false }
+unicode-ident = { version = "1" }
+bae = { version = "0.2", package = "sea-bae", default-features = false }
+actix-router = "0.5"
