@@ -3,6 +3,11 @@ name = "actix-common-cli"
 version = "0.1.0"
 edition = "2021"
 
+
+[[bin]]
+name = "actix-cli"
+path = "src/bin/actix_cli.rs"
+
 [lib]
 name = "actix_cli"
 path = "src/lib.rs"
